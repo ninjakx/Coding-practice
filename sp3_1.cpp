@@ -1,6 +1,4 @@
-// Iterative C++ program to generate all binary
-// strings formed by replacing each wildcard
-// character by 0 or 1
+// https://ide.geeksforgeeks.org/NaxsnhkgLT
 #include <string>
 #include <bits/stdc++.h>
 #include <algorithm>
