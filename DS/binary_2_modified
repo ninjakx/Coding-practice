@@ -1,0 +1,63 @@
+#include<iostream>
+#include<stdio.h>
+#include<vector>
+using namespace std;
+
+/*class Node
+{
+    private:
+    int data;
+    Node *next;
+}*/
+int levels;
+class Node
+{   
+    public:
+    int data;
+    Node* left;
+    Node* right;
+};
+
+class binarytree
+{   
+    public:
+    Node* createNewnode(int num);
+    void display(Node *head_ref);
+};
+Node* binarytree::createNewnode(int num)
+{
+    Node *cur = new Node;
+    (cur)->data = num;
+    (cur)->left=NULL;
+    (cur)->right=NULL;
+    return cur;
+
+}
+void binarytree::display(Node *head_ref)
+{
+	
+    if(head_ref)
+    {
+    cout<<(head_ref)->data<<" ";
+    display(head_ref->left);
+    display(head_ref->right);
+    }
+
+}
+
+int main()
+{
+    Node *head=NULL;
+    Node obj;
+    binarytree bin;
+    head=bin.createNewnode(1);
+    head->left = bin.createNewnode(2);
+    head->right = bin.createNewnode(3);
+    (head->left)->left = bin.createNewnode(4);
+    (head->left)->right = bin.createNewnode(5);
+    (head->right)->left = bin.createNewnode(6);
+    (head->right)->right = bin.createNewnode(7);
+    bin.display(head);
+    
+    return 0;
+}
