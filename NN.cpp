@@ -1,11 +1,8 @@
 #include <iostream>
 #include <vector>
 #include<map>
-#include<queue>
 #include<math.h>
 #include<vector>
-#include <cassert>
-
 using namespace std;
 
 map<pair<string,string>,float> interconnection;
