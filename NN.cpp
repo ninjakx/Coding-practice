@@ -48,10 +48,6 @@ float activation_function::sigmoid(float x)
 class Forward:public activation_function
 {
     private:
-    string layer_type;
-    int n_layers;
-    int no_of_nodes;
-    string activation;
     string cur_layer;
     string prev_layer;
     int count;
@@ -145,7 +141,6 @@ void Forward::nodes(vector<float> input)
 class Backward:public Forward
 {
     private:
-    float delta;
     float actual_output;
     public:
     Backward(float act_output) 
